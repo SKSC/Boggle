@@ -7,9 +7,18 @@
 //
 
 #include <iostream>
+#include "Boggle.h"
+#include <vector>
+
+static Boggle s_Boggle("dict.txt");
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
+    
+    std::vector<std::string> results;
+    s_Boggle.Solve("pesa", results);
+    s_Boggle.Solve("meusdeloa", results);
+    
     return 0;
 }
